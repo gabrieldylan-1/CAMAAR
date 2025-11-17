@@ -1,0 +1,5 @@
+# frozen_string_literal: true
+
+default: --publish-quiet --format pretty --strict-undefined --tags "not @wip"
+wip: --tags @wip --wip --strict-undefined
+rerun: --format rerun --out tmp/cucumber-rerun.txt --strict-undefined

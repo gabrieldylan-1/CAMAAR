@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+include FileUtils
+
+ROOT = File.expand_path("..", __dir__)
+
+def system!(*args)
+  system(*args, exception: true)
+end
+
+chdir ROOT do
+  puts "== Installing dependencies =="
+  system!("bundle", "install")
+
+  puts "== Preparing database =="
+  system!("bundle", "exec", "rails", "db:prepare")
+
+  puts "== Removing old logs and tempfiles =="
+  system!("bin/rails", "log:clear", "tmp:clear")
+
+  puts "== Seeding database =="
+  system!("bundle", "exec", "rails", "db:seed")
+end
