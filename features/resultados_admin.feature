@@ -1,7 +1,7 @@
-Feature: Consulta e download de resultados
-  Para analisar o desempenho das disciplinas
-  Como administrador autenticado
-  Quero visualizar os cards de resultados e exportá-los em CSV
+Feature: Gerar relatório do administrador 
+  Eu como Administrador
+  Quero baixar um arquivo csv contendo os resultados de um formulário
+  A fim de avaliar o desempenho das turmas
 
   Background:
     Given estou autenticado como "admin"

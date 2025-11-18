@@ -1,7 +1,7 @@
-Feature: Popup de criação/edição de template
-  Para definir perguntas das avaliações
-  Como administrador autenticado
-  Quero usar o modal para criar ou editar templates com diferentes tipos de questões
+Feature: Criar template de formulário
+  Eu como Administrador
+  Quero criar um template de formulário contendo as questões do formulário
+  A fim de gerar formulários de avaliações para avaliar o desempenho das turmas
 
   Background:
     Given estou autenticado como "admin"
