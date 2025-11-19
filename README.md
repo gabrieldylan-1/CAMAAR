@@ -8,7 +8,7 @@
    ```bash
    docker compose up --build
    ```
-   Isso instala as gems, prepara o banco Postgres (`camaar_development`) e expõe a aplicação em `http://localhost:3000`.
+   Isso instala as gems, prepara o banco Postgres (`camaar_development`) e expõe a aplicação em `http://localhost:11112`.
 
 2. No primeiro carregamento execute as migrations e seeds dentro do container caso você adicione novas estruturas:
    ```bash
