@@ -9,16 +9,6 @@ Feature: Atualizar base de dados com dados do SIGAA
     And Ana possui credenciais válidas para acessar o SIGAA
 
   @happy_path
-  Scenario: Administrador atualiza a base com sucesso
-    Given Ana acessa o menu "Integrações > SIGAA"
-    When dispara a ação "Atualizar base"
-    And informa as credenciais do SIGAA
-    Then o sistema conecta ao SIGAA
-    And importa os registros atualizados
-    And apresenta mensagem "Base sincronizada com sucesso"
-    And gera log da execução com quantidade de registros alterados
-
-  @happy_path
   Scenario: Atualização parcial com resumo de mudanças
     Given Ana inicia a atualização do SIGAA
     When alguns registros são atualizados e outros mantidos

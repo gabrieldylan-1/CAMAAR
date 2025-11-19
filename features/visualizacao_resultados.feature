@@ -6,9 +6,9 @@ Feature: Visualização de resultados dos formulários
   Background:
     Given o administrador "Ana" está autenticado
     And existem formulários criados por ela com indicadores:
-      | título                     | status   | respostas |
-      | Pesquisa Satisfação 2024   | ativo    | 150       |
-      | Checklist Implantação      | encerrado| 80        |
+      | título    | status   | respostas |
+      | CIC0197   | ativo    | 150       |
+      | CIC0200   | encerrado| 80        |
 
   @happy_path
   Scenario: Administrador consulta resultados e vê contagem de respostas

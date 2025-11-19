@@ -5,13 +5,13 @@ Feature: Responder formulário da turma
 
   Background:
     Given o participante "Lucas" está autenticado
-    And Lucas está matriculado na turma "Gestão 2024"
-    And o formulário "Avaliação da Turma Gestão 2024" está disponível para resposta
+    And Lucas está matriculado na turma "CIC0197"
+    And o formulário "Avaliação da Turma CIC0197" está disponível para resposta
 
   @happy_path
   Scenario: Participante preenche e envia avaliação com sucesso
     Given Lucas acessa o menu "Formulários"
-    When seleciona "Avaliação da Turma Gestão 2024"
+    When seleciona "Avaliação da Turma CIC0197"
     And responde todas as perguntas obrigatórias
     And envia o formulário
     Then o sistema confirma “Avaliação enviada com sucesso”

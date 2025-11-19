@@ -6,22 +6,22 @@ Feature: Visualizar formulários pendentes para responder
   Background:
     Given o participante "Lucas" está autenticado
     And Lucas está matriculado nas turmas:
-      | turma           | formulário                     | status_resposta |
-      | Liderança 2024  | Feedback Inicial               | não respondido  |
-      | Liderança 2024  | Avaliação Final                | respondido      |
-      | Scrum Avançado  | Diagnóstico de Conhecimento    | não respondido  |
+      | turma    | formulário        | status_resposta |
+      | CIC0197  | Avaliação Final 1 | não respondido  |
+      | CIC0197  | Avaliação Final 2 | respondido      |
+      | CIC0200  | Feedback 1        | não respondido  |
 
   @happy_path
   Scenario: Participante lista apenas formulários não respondidos
     Given Lucas acessa o menu "Formulários para responder"
     When solicita visualizar os formulários pendentes
-    Then a lista exibe "Feedback Inicial" e "Diagnóstico de Conhecimento" com suas respectivas turmas e prazos
-    And o formulário "Avaliação Final" não aparece por já estar respondido
+    Then a lista exibe "Avaliação Final 1" e "Feedback 1" com suas respectivas turmas e prazos
+    And o formulário "Avaliação Final 2" não aparece por já estar respondido
 
   @happy_path
   Scenario: Participante inicia o preenchimento a partir da lista
     Given Lucas está na lista de formulários pendentes
-    When seleciona "Feedback Inicial" e clica em "Responder"
+    When seleciona "Avaliação Final 1" e clica em "Responder"
     Then o sistema abre o formulário correspondente para preenchimento
 
   @sad_path
@@ -40,7 +40,7 @@ Feature: Visualizar formulários pendentes para responder
 
   @sad_path
   Scenario: Participante tenta responder formulário que já venceu
-    Given Lucas vê o formulário "Feedback Inicial" com prazo expirado
+    Given Lucas vê o formulário "Avaliação Final 1" com prazo expirado
     When tenta abrir o formulário
     Then o sistema bloqueia o acesso
     And mostra a mensagem "Este formulário não está mais disponível para resposta."

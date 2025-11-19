@@ -6,28 +6,28 @@ Feature: Visualizar templates criados
   Background:
     Given o administrador "Ana" está autenticado
     And existem os templates abaixo no sistema:
-      | título                    | criado_por |
-      | Pesquisa Satisfação 2024 | Ana        |
-      | Checklist Financeiro     | Ana        |
-      | Aviso Geral RH           | Bruno      |
+      | título  | criado_por |
+      | CIC0197 | Ana        |
+      | CIC0200 | Ana        |
+      | CIC0197 | Bruno      |
 
   @happy_path
   Scenario: Administrador lista apenas os templates que criou
     Given Ana acessa o menu "Templates"
     When solicita visualizar seus modelos
-    Then a lista exibe "Pesquisa Satisfação 2024" e "Checklist Financeiro"
+    Then a lista exibe "CIC0197" e "CIC0200"
     And templates criados por outros administradores não são mostrados
 
   @happy_path
   Scenario: Administrador navega até a edição a partir da lista
     Given Ana está na lista de templates
-    When seleciona "Pesquisa Satisfação 2024" e clica em Editar
+    When seleciona "CIC0197" e clica em Editar
     Then o sistema abre a tela de edição correspondendo ao template escolhido
 
   @happy_path
   Scenario: Administrador acessa opção de exclusão a partir da lista
     Given Ana está na lista de templates
-    When expande as ações do template "Checklist Financeiro"
+    When expande as ações do template "CIC0200"
     Then visualiza o botão de excluir disponível para modelos próprios
 
   @sad_path

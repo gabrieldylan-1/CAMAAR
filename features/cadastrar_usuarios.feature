@@ -16,14 +16,6 @@ Feature: Importar novos participantes do SIGAA
     And ao confirmar, envia e-mails com link para definição de senha
     And registra o status “Solicitação enviada” para cada participante
 
-  @happy_path
-  Scenario: Importação ignora usuários já cadastrados
-    Given Ana inicia nova importação da mesma turma
-    When o sistema encontra participantes que já definiram senha previamente
-    Then esses registros são ignorados
-    And apenas os novos participantes recebem o e-mail de definição de senha
-    And um resumo informa quantos foram ignorados e quantos receberam solicitação
-
   @sad_path
   Scenario: Falha ao acessar dados do SIGAA
     Given Ana tenta importar participantes

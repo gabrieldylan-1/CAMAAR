@@ -6,8 +6,8 @@ Feature: Autenticação por e-mail ou matrícula
   Background:
     Given que os seguintes usuários já existem:
       | perfil         | nome  | email               | matricula | senha      |
-      | usuario_padrao | João  | joao@empresa.com    | BB123456  | Senha#123  |
-      | administrador  | Ana   | ana.admin@empresa.com | BB654321 | Admin#321  |
+      | usuario_padrao | João  | joao@unb.br    | UNB123456  | Senha#123  |
+      | administrador  | Ana   | ana.admin@unb.br | UNB654321 | Admin#321  |
 
   @happy_path
   Scenario Outline: Usuário acessa o sistema com credencial válida
@@ -18,13 +18,13 @@ Feature: Autenticação por e-mail ou matrícula
     And o menu lateral não exibe opções extras além das permitidas ao perfil
     Examples:
       | perfil         | tipo_login | credencial        |
-      | usuario_padrao | e-mail     | joao@empresa.com  |
-      | usuario_padrao | matrícula  | BB123456          |
+      | usuario_padrao | e-mail     | joao@unb.br  |
+      | usuario_padrao | matrícula  | UNB123456          |
 
   @happy_path @admin
   Scenario: Administrador visualiza a opção de gerenciamento após autenticar
     Given que "administrador" deseja acessar o sistema
-    When informa o e-mail "ana.admin@empresa.com" e a senha correta
+    When informa o e-mail "ana.admin@unb.br" e a senha correta
     Then o login é autorizado
     And o menu lateral exibe a opção "Gerenciamento"
     And o administrador pode acessar as funcionalidades de gestão do sistema
@@ -38,9 +38,9 @@ Feature: Autenticação por e-mail ou matrícula
     And nenhuma funcionalidade do sistema é carregada
     Examples:
       | perfil         | tipo_login | credencial        | senha_tentada |
-      | usuario_padrao | e-mail     | joao@empresa.com  | SenhaErrada1  |
-      | usuario_padrao | matrícula  | BB123456          | SenhaErrada1  |
-      | administrador  | e-mail     | ana.admin@empresa.com | AdminErrada |
+      | usuario_padrao | e-mail     | joao@unb.br  | SenhaErrada1  |
+      | usuario_padrao | matrícula  | UNB123456          | SenhaErrada1  |
+      | administrador  | e-mail     | ana.admin@unb.br | AdminErrada |
 
   @sad_path
   Scenario: Autenticação falha quando um dos campos não é informado

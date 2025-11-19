@@ -1,44 +1,71 @@
-Given("que estou na tela de login") do
-  pending "Implemente a navegação até a tela /login com Capybara"
+# frozen_string_literal: true
+
+# Passos gerados a partir de login.feature. Substitua os pendings pela automação real.
+
+Given('que os seguintes usuários já existem:') do |table|
+  pending('TODO: implementar passo: Given que os seguintes usuários já existem:')
 end
 
-Given("existe um {word} cadastrado com email {string} e senha {string}") do |perfil, email, senha|
-  pending <<~MSG
-    Cadastre (ou faça stub) o #{perfil} com email #{email} e senha #{senha}.
-    Utilize os modelos reais para garantir autenticação consistente.
-  MSG
+Given('que {string} deseja acessar o sistema') do |perfil|
+  pending('TODO: implementar passo: Given que "<perfil>" deseja acessar o sistema')
 end
 
-Given("a conta excedeu o número máximo de tentativas") do
-  pending "Configure o estado do usuário como bloqueado para simular lockout"
+When('informa {string} {string} e a senha correta') do |tipo_login, credencial|
+  pending('TODO: implementar passo: When informa "<tipo_login>" "<credencial>" e a senha correta')
 end
 
-When("informo o email {string} e a senha {string}") do |email, senha|
-  pending <<~MSG
-    Preencha os campos de login com email=#{email} e senha=#{senha} usando Capybara.
-  MSG
+Then('o login é autorizado') do
+  pending('TODO: implementar passo: Then o login é autorizado')
 end
 
-When("confirmo o envio do formulário") do
-  pending "Clique no botão Entrar e aguarde a resposta da aplicação"
+And('o usuário visualiza a tela principal para responder formulários') do
+  pending('TODO: implementar passo: And o usuário visualiza a tela principal para responder formulários')
 end
 
-Then("devo ser direcionado para o painel do {word}") do |perfil|
-  pending "Valide a URL/redirecionamento conforme o dashboard do perfil #{perfil}"
+And('o menu lateral não exibe opções extras além das permitidas ao perfil') do
+  pending('TODO: implementar passo: And o menu lateral não exibe opções extras além das permitidas ao perfil')
 end
 
-Then("devo ver a mensagem {string}") do |mensagem|
-  pending "Asserte que o texto '#{mensagem}' está visível na página"
+When('informa o e-mail {string} e a senha correta') do |ana_admin_unb_br|
+  pending('TODO: implementar passo: When informa o e-mail "ana.admin@unb.br" e a senha correta')
 end
 
-Then("devo continuar na tela de login") do
-  pending "Certifique-se de que a URL/perfil atual continua sendo /login"
+And('o menu lateral exibe a opção {string}') do |gerenciamento|
+  pending('TODO: implementar passo: And o menu lateral exibe a opção "Gerenciamento"')
 end
 
-Then("devo ver a mensagem de erro {string}") do |mensagem|
-  pending "Busque por banners/toasts exibindo '#{mensagem}'"
+And('o administrador pode acessar as funcionalidades de gestão do sistema') do
+  pending('TODO: implementar passo: And o administrador pode acessar as funcionalidades de gestão do sistema')
 end
 
-Then("os campos devem ser destacados como inválidos") do
-  pending "Use seletores CSS para checar se inputs possuem classes de erro"
+When('informa {string} {string} com a senha {string}') do |tipo_login, credencial, senha_tentada|
+  pending('TODO: implementar passo: When informa "<tipo_login>" "<credencial>" com a senha "<senha_tentada>"')
+end
+
+Then('o sistema nega o acesso') do
+  pending('TODO: implementar passo: Then o sistema nega o acesso')
+end
+
+And('uma mensagem informa que e-mail/matrícula ou senha estão incorretos') do
+  pending('TODO: implementar passo: And uma mensagem informa que e-mail/matrícula ou senha estão incorretos')
+end
+
+And('nenhuma funcionalidade do sistema é carregada') do
+  pending('TODO: implementar passo: And nenhuma funcionalidade do sistema é carregada')
+end
+
+Given('que qualquer usuário tenta acessar o sistema') do
+  pending('TODO: implementar passo: Given que qualquer usuário tenta acessar o sistema')
+end
+
+When('submete o formulário com e-mail/matrícula ou senha em branco') do
+  pending('TODO: implementar passo: When submete o formulário com e-mail/matrícula ou senha em branco')
+end
+
+Then('o sistema impede o envio') do
+  pending('TODO: implementar passo: Then o sistema impede o envio')
+end
+
+And('uma mensagem orienta a preencher todos os campos obrigatórios') do
+  pending('TODO: implementar passo: And uma mensagem orienta a preencher todos os campos obrigatórios')
 end
