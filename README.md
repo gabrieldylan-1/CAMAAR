@@ -44,27 +44,6 @@ Para viabilizar a realização de testes de interface, podem ser utilizados os s
 *A senha do admin pode ser sobrescrita pela variável de ambiente `SENHA_ADMIN_CAMAAR`.
 
 
-## Funcionalidades
-As funcionalidades desenvolvidas no projeto correspondem a histórias de usuário especificadas nas issues do repositório original (https://github.com/EngSwCIC/CAMAAR/issues). 
-
-| Issue | Descrição                                            | Responsável | Esforço |
-|-------|------------------------------------------------------|-------------|---------|
-|  06   | Importar dados do SIGAA (#098)                       | Gabriel Dylan |   8     |
-|  07   | Responder formulário (#099)                          | Gabriel Dylan |   5     |
-|  08   | Cadastrar usuários do sistema (#100)                 | Gabriel Dylan |   5     |
-|  09   | Gerar relatório do administrador (#101)              | Gabriel Dylan |   5     |
-|  10   | Criar template de formulário (#102)                  | Gabriel Dylan |   8     |
-|  11   | Criar formulário de avaliação (#103)                 | Gabriel Dylan |   8     |
-|  12   | Sistema de login (#104)                              | Gabriel Dylan |   5     |
-|  13   | Sistema de definição de senha (#105)                 | Gabriel Dylan |   5     |
-|  14   | Atualizar base de dados com os dados do SIGAA (#108) | Gabriel Dylan |   8     |
-|  15   | Visualização de formulários para responder (#109)    | Gabriel Dylan |   8     |
-|  16   | Visualização de resultados dos formulários (#110)    | Gabriel Dylan |   5     |
-|  17   | Visualização dos templates criados (#111)            | Gabriel Dylan |   5     |
-|  18   | Edição e deleção de templates (#112)                 | Gabriel Dylan |   5     |
-
-Ao final da Sprint-2, todas as issues foram resolvidas, à exceção da issue #11 (Criar formulário de avaliação), que será tratada na Sprint-3.
-
 ## Política de branching
 Para cada sprint foi criada uma branch (sprint-1, sprint-2 e sprint-3). 
 
