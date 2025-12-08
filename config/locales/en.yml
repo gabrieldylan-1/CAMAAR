@@ -1,9 +1,0 @@
-en:
-  hello: "Hello world"
-  layouts:
-    application:
-      navigation: "Navigation"
-  pages:
-    home:
-      hero_title: "Bem-vindo ao CAMAAR"
-      hero_body: "Comece a construir seu sistema de avaliação com BDD."
