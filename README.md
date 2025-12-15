@@ -43,6 +43,29 @@ Para viabilizar a realização de testes de interface, podem ser utilizados os s
 
 *A senha do admin pode ser sobrescrita pela variável de ambiente `SENHA_ADMIN_CAMAAR`.
 
+### Refatoração, documentação e complementação (Rubycritic, SimpleCov, RDoc)
+Na sprint-3, por meio de comentários ao código, foi viabilizada a geração de documentação pela gem RDoc. Além disso, submeteu-se o código da sprint-2 à avaliação das ferramentas Rubycritic e SimpleCov, a fim de identificar oportunidades, respectivamente, de refatoração de controladores e de ampliação da cobertura de testes.
+
+A ferramenta Rubycritic identificou dois controladores com complexidade/método superior a 20: AdminController e RespostaFormulariosController. O TemplatesController também foi apontado como componente de alta complexidade, embora a complexidade/método estivesse abaixo do limite (9,7). A ferramenta SimpleCov indicou cobertura de testes abaixo de 90% para as seguintes classes: TemplatesController, ApplicationController e ApplicationHelper.
+
+A tabela comparativa abaixo descreve as alterações realizadas, na sprint-3, a partir das indicações das ferramentas Rubycritic e SimpleCov:
+
+|             Classe            | Sprint | Complexidade/método | Cobertura de testes |
+|-------------------------------|--------|---------------------|---------------------|
+| AdminController               |   2    |        26,60        |                     |
+| AdminController               |   3    |        15,80        |                     |
+| ApplicationController         |   2    |                     |       85,00%        |
+| ApplicationController         |   3    |                     |      100,00%        |
+| RespostaFormulariosController |   2    |        25,00        |                     |
+| RespostaFormulariosController |   3    |        17,80        |                     |
+| TemplatesController           |   2    |         9,70        |       30,56%        |
+| TemplatesController           |   3    |         4,20        |       97,78%        |
+| ApplicationHelper             |   2    |                     |       60,00%        |
+| ApplicationHelper             |   3    |                     |       93,75%        |
+
+
+Ao final da sprint-2, visualizava-se o seguinte panorama em relação aos testes: o resultado final era aprovado pela totalidade dos 46 testes RSpec e por 27 dos 31 testes Cucumber criados. Já ao final na sprint-3, observa-se o seguinte cenário: a cobertura do RSpec subiu para 86 testes (97.61%); a cobertura do Cucumber se manteve em 31 testes; o código é aprovado em todos os testes.
+
 
 ## Política de branching
 Para cada sprint foi criada uma branch (sprint-1, sprint-2 e sprint-3). 
